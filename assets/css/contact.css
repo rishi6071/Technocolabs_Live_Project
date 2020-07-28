@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* ------------ || CONTACT PAGE ------------ */
+
+/* Contact Background */
+.main-bg {
+    background: #fafafa;
+}
+
+.contact-padding {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.contact-section-heading {
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    color: hsl(200, 18%, 26%);
+}
+
+
+/* Address & Business Hours */
+ul.contact-address {
+    list-style-type: none;
+    line-height: 1.8;
+}
+
+ul.contact-address li {
+    /* color: hsl(200, 18%, 26%); */
+    color: grey;
+    font-size: medium;
+}
+
+ul.office-timing li {
+    font-size: 0.9em;
+}
+
+ul.office-timing span {
+    font-weight: 600;
+    color: hsla(200, 18%, 26%, 0.8);
+}

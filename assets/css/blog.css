@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cardFixed{
+    position: relative !important;
+    width: auto !important;
+}
+
+.textBlog{
+    padding: 0 1rem;
+    margin: 1rem 0 0 0 ;
+}
+
+.padDown{ padding: 70px; }
+
+.displayNone{ display: none; }
+
+p{ text-align: justify; }
+
+@media only screen and (max-width : 578px){
+    .cardFixed{
+        position: none !important;
+        width: auto !important;
+        display: none !important;
+    }
+    .displayNone{
+        display: block;
+    }
+}

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="author" content="Rishi Soni, Ofrin Lopes, Megha Sharma">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- title tag -->
+    <title>Home | TechnoColabs</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./assets/css/inbuilt_css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/inbuilt_css/owl.theme.default.min.css">
+
+    <!-- FONT AWESOME SCRIPT KIT CODE OF W3SCHOOL -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/testimonial.css">
+    <link rel="stylesheet" href="./assets/css/clientSlider.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
+    <link rel="stylesheet" href="./assets/css/gotoTopButton.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/ripple.css">
+
+</head>
+
+<body>
+
+    <!-- || HEADER & NAVBAR Start -->
+    <header>
+        <div id="top"></div>
+        <!-- Logo and phone -->
+        <div class="container-fluid" id="header-logo-contact">
+            <p class="pt-3 pb-0 px-4">
+                <a href="./index.html" class="brand-logo">
+                    <img src="./assets/img/logo/brandLogo.png" alt="Brand-logo">
+                </a>
+                <a href="tel:1234567890" class="header-contact">
+                    <span class='fas fa-phone-square-alt'></span> 1234 567 890
+                </a>
+            </p>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg p-0">
+            <a class="navbar-brand brand-logo brand-logo-toggler" href="#">
+                <img src="./assets/img/logo/brandLogo.png" class="" alt="Brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars menu-icon" aria-hidden="true" id="bar" onclick="openMenu(this)"></i>
+                    <i class="fa fa-times menu-close-icon" aria-hidden="true" id="cross" onclick="closeMenu(this)"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link ripple" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="./services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="./contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Triggering Modal -->
+                        <a class="nav-link ripple" href="#" data-toggle="modal" data-target="#loginSignup">Login/Signup
+                            <i class="fas fa-sign-in-alt"></i></a>
+
+                        <!-- Modal -->
+                        <div class="modal" id="loginSignup" tabindex="-1" role="dialog"
+                            aria-labelledby="loginSignupTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title pl-2 brand-logo" id="exampleModalLongTitle"><img
+                                                src="./assets/img/logo/brandLogo.png" alt="brnad-logo"></h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Login or Signup Option -->
+                                        <div class="row">
+                                            <div class="col-6 text-center py-0">
+                                                <a href="#" class="h6 active-opt" id="login-opt">Login</a>
+                                                <hr class="w-100 active-border">
+                                            </div>
+                                            <div class="col-6 text-center py-0">
+                                                <a href="#" class="h6" id="signup-opt">Signup</a>
+                                                <hr class="w-100" id="">
+                                            </div>
+                                        </div>
+
+                                        <!-- Login Fields -->
+                                        <form action="#" method="post" id="login-form" class="d-block">
+                                            <div class="form-group">
+                                                <label for="login-email" class="form-label">Email Id:</label>
+                                                <input type="email" name="login-email" id="login-email"
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="login-password">Password:</label>
+                                                <input type="password" name="login-password" id="login-password"
+                                                    class="form-control" required>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="login-remember"
+                                                    name="login-remember" checked>
+                                                <label class="custom-control-label text-dark"
+                                                    for="login-remember">Remember Me</label>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <button type="submit"
+                                                            class="btn btn-success ripple btn-block">Submit</button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="reset"
+                                                            class="btn btn-info ripple btn-block">Reset</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <!-- Signup Fields -->
+                                        <form action="#" method="post" id="signup-form" class="d-none">
+                                            <div class="form-group">
+                                                <label for="signup-username">Username:</label>
+                                                <input type="text" class="form-control" name="signup-username"
+                                                    id="signup-username" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup-email">Email Id:</label>
+                                                <input type="email" class="form-control" name="signup-email"
+                                                    id="signup-email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup-contact">Contact No.</label>
+                                                <input type="tel" name="signup-contact" id="signup-contact"
+                                                    class="form-control" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup-pswd">Password:</label>
+                                                <input type="password" name="signup-pswd" id="signup-pswd"
+                                                    class="form-control" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup-cpswd">Confirm Password:</label>
+                                                <input type="password" name="signup-cpswd" id="signup-cpswd"
+                                                    class="form-control" required>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck"
+                                                    name="example1" checked>
+                                                <label class="custom-control-label text-dark" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <small>By creating an account, You agree to our <a href="./privacy.html"
+                                                        class="text-warning">Terms & Policy</a></small>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <button type="submit"
+                                                            class="btn btn-success ripple btn-block">Submit</button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="reset"
+                                                            class="btn btn-info ripple btn-block">Reset</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- || HEADER & NAVBAR End -->
+
+
+    <!-- || HOME BANNER Start -->
+    <section>
+        <div class="container-fluid" id="banner">
+            <div class="row">
+                <div class="col-md-7 p-lg-5 p-4">
+                    <p class="h1 font-weight-bold"><span class="text-warning">DUMMY</span> HEADING</p>
+
+                    <div class="mt-lg-5 mt-md-4">
+                        <p class="h6 font-rowdies">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="mt-3 font-rowdies text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Deleniti delectus modi numquam! Cupiditate, expedita necessitatibus!
+                        </p>
+                    </div>
+
+                    <div class="media pt-4">
+                        <img class="mr-3 banner-obj-img" src="./assets/img/banner/obj.jpg" alt="Object Image">
+                        <div class="media-body pt-md-2">
+                            <h6 class="mt-0 font-weight-bold">Media heading</h6>
+                            <small>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                sollicitudin. Lorem ipsum dolor sit amet.
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="media pt-4">
+                        <img class="mr-3 banner-obj-img" src="./assets/img/banner/obj.jpg" alt="Object Image">
+                        <div class="media-body pt-md-2">
+                            <h6 class="mt-0 font-weight-bold">Media heading</h6>
+                            <small>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                sollicitudin. Lorem ipsum dolor sit amet.
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-4">
+                        <a href="#" class="btn btn-warning ripple px-md-4 px-3 py-md-2 py-1">CALL TO ACTION</a>
+                    </div>
+                </div>
+
+                <div class="col-md-5 p-0">
+                    <img src="./assets/img/banner/homeBanner.jpg" class="banner-img" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- || HOME BANNER End -->
+
+
+    <!-- SERVICES SLIDER Start -->
+    <section>
+        <h2 class="mb-3 mt-5 service-heading">BEST SERVICES <span class="text-warning">EVER</span></h2>
+        <div class="container company-services owl-carousel owl-theme py-2">
+            <div class="item">
+                <div class="card services-card h-100">
+                    <div class="card-body">
+                        <img class="card-img-top" src="./assets/img/testimonial/sample.jpg" alt="Card image cap">
+                        <p class="card-title">Service2</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="card services-card h-100">
+                    <div class="card-body">
+                        <img class="card-img-top" src="./assets/img/testimonial/sample.jpg" alt="Card image cap">
+                        <p class="card-title">Service2</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="card services-card h-100">
+                    <div class="card-body">
+                        <img class="card-img-top" src="./assets/img/testimonial/sample.jpg" alt="Card image cap">
+                        <p class="card-title">Service2</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="card services-card h-100">
+                    <div class="card-body">
+                        <img class="card-img-top" src="./assets/img/testimonial/sample.jpg" alt="Card image cap">
+                        <p class="card-title">Service2</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="card services-card h-100">
+                    <div class="card-body">
+                        <img class="card-img-top" src="./assets/img/testimonial/sample.jpg" alt="Card image cap">
+                        <p class="card-title">Service2</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- || SERVICES SLIDER End -->
+
+
+    <!-- || QUALITY CONTENT & QUOTE FORM Start -->
+    <section class="quality-quote-form mt-4">
+        <div class="container">
+            <div class="row">
+
+                <!-- Quality Content -->
+                <div class="col-md-7 py-md-5 py-4 quality-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolor aut minus id similique iste
+                        dolorum praesentium aliquam repellat maiores! Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Reiciendis, amet?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, exercitationem quam
+                        accusantium sit et voluptate esse voluptatibus? Tempora, impedit qui. Lorem ipsum, dolor sit
+                        amet consectetur adipisicing.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, exercitationem quam
+                        accusantium sit et voluptate esse voluptatibus? Tempora, impedit qui. Lorem ipsum dolor sit
+                        amet.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Veritatis,
+                        exercitationem quam accusantium sit et voluptate esse voluptatibus? Tempora, impedit qui. Lorem
+                        ipsum dolor sit amet.</p>
+                </div>
+
+                <!-- Quote Form -->
+                <div class="col-md-4 offset-md-1 bg-white py-3 px-4 form-shadow">
+                    <form action="#" id="contact-form">
+                        <div class="form-group mt-4">
+                            <label for="contact-name">Name:</label>
+                            <input type="text" id="contact-name" name="user-name" class="form-control" />
+                        </div>
+                        <div class="form-group mt-4">
+                            <label for="contact-mail">Email:</label>
+                            <input type="mail" id="contact-mail" name="user-mail" class="form-control" />
+                        </div>
+                        <div class="form-group mt-4">
+                            <label for="contact-message">Message</label>
+                            <textarea name="user-message" id="contact-message" rows="5" class="form-control"
+                                placeholder=""></textarea>
+                        </div>
+                        <div class="form-group mt-4">
+                            <button type="submit" class="btn btn-block btn-warning ripple text-white">GET A
+                                QUOTE</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- || QUALITY CONTENT & QUOTE FORM End -->
+
+
+    <!-- || TESTIMONIAL CAROUSEL Start -->
+    <section>
+        <div class="container text-center mt-5 pt-4">
+            <h2 class="mb-4 service-heading">TESTIMONIAL</h2>
+        </div>
+        <div class="container-fluid testimonial owl-carousel owl-theme py-2">
+            <div class="item">
+                <div class="card testimonial-card p-md-4 p-3">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <img class="profile-image" src="./assets/img/testimonial/sample.jpg" alt="image">
+                        </div>
+
+                        <div class="col-lg-9 col-md-8">
+                            <h2 class="profile-name">Ramsey Harper</h2>
+                            <p class="profile-position">Graphic Designer</p>
+                            <p class="profile-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aperiam animi
+                                doloribus! Sapiente, iusto. Debitis nam quisquam, sequi, aliquid, amet laboriosam at rem
+                                earum unde quae excepturi eius numquam error?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="card testimonial-card p-md-4 p-3">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <img class="profile-image" src="./assets/img/testimonial/sample.jpg" alt="image">
+                        </div>
+
+                        <div class="col-lg-9 col-md-8">
+                            <h2 class="profile-name">Ramsey Harper</h2>
+                            <p class="profile-position">Graphic Designer</p>
+                            <p class="profile-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aperiam animi
+                                doloribus!
+                                Sapiente, iusto. Debitis nam quisquam, sequi, aliquid, amet laboriosam at rem earum unde
+                                quae excepturi eius numquam error?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="card testimonial-card p-md-4 p-3">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <img class="profile-image" src="./assets/img/testimonial/sample.jpg" alt="image">
+                        </div>
+
+                        <div class="col-lg-9 col-md-8">
+                            <h2 class="profile-name">Ramsey Harper</h2>
+                            <p class="profile-position">Graphic Designer</p>
+                            <p class="profile-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aperiam animi
+                                doloribus!
+                                Sapiente, iusto. Debitis nam quisquam, sequi, aliquid, amet laboriosam at rem earum unde
+                                quae excepturi eius numquam error?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- || TESTIMONIAL CAROUSEL End -->
+
+
+    <!-- || HAPPY CLIENTS Start -->
+    <section>
+        <div class="container my-5">
+            <h2 class="service-heading">HAPPY <span class="text-warning">CLIENTS</span></h2>
+            <hr class="mx-auto thematic-break">
+
+            <div id="myCarousel" class="carousel slide mt-4" data-ride="carousel">
+                <div class="carousel-inner row w-100 mx-auto">
+                    <div class="carousel-item col-md-4 active">
+                        <div class="card clients-card h-100">
+                            <div class="card-body text-center">
+                                <img class="card-img-top rounded-circle" src="./assets/img/testimonial/sample.jpg"
+                                    alt="Card image cap">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+
+                                <div class="pt-3 client-info">
+                                    <p>Mr. John Doe</p>
+                                    <p>Founder of Something</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card clients-card h-100">
+                            <div class="card-body text-center">
+                                <img class="card-img-top rounded-circle" src="./assets/img/testimonial/sample.jpg"
+                                    alt="Card image cap">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content. Some quick example text to build on the card title and
+                                    make up the bulk of the card's content.</p>
+
+                                <div class="pt-3 client-info">
+                                    <p>Mr. John Doe</p>
+                                    <p>Founder of Something</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card clients-card h-100">
+                            <div class="card-body text-center">
+                                <img class="card-img-top rounded-circle" src="./assets/img/testimonial/sample.jpg"
+                                    alt="Card image cap">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+
+                                <div class="pt-3 client-info">
+                                    <p>Mr. John Doe</p>
+                                    <p>Founder of Something</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card clients-card h-100">
+                            <div class="card-body text-center">
+                                <img class="card-img-top rounded-circle" src="./assets/img/testimonial/sample.jpg"
+                                    alt="Card image cap">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content. Some quick example text to build on the card title and
+                                    make up the bulk of the card's content.</p>
+
+                                <div class="pt-3 client-info">
+                                    <p>Mr. John Doe</p>
+                                    <p>Founder of Something</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card clients-card h-100">
+                            <div class="card-body text-center">
+                                <img class="card-img-top rounded-circle" src="./assets/img/testimonial/sample.jpg"
+                                    alt="Card image cap">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+
+                                <div class="pt-3 client-info">
+                                    <p>Mr. John Doe</p>
+                                    <p>Founder of Something</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card clients-card h-100">
+                            <div class="card-body text-center">
+                                <img class="card-img-top rounded-circle" src="./assets/img/testimonial/sample.jpg"
+                                    alt="Card image cap">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+
+                                <div class="pt-3 client-info">
+                                    <p>Mr. John Doe</p>
+                                    <p>Founder of Something</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card clients-card h-100">
+                            <div class="card-body text-center">
+                                <img class="card-img-top rounded-circle" src="./assets/img/testimonial/sample.jpg"
+                                    alt="Card image cap">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content. Some quick example text to build on the card title and
+                                    make up the bulk of the card's content.</p>
+
+                                <div class="pt-3 client-info">
+                                    <p>Mr. John Doe</p>
+                                    <p>Founder of Something</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center mt-4">
+                            <a class="btn btn-outline-secondary ripple btn-sm mx-1 prev" href="javascript:void(0)"
+                                title="Previous">
+                                <i class="fa fa-lg fa-chevron-left"></i>
+                            </a>
+                            <a class="btn btn-outline-secondary ripple btn-sm mx-1 next" href="javascript:void(0)"
+                                title="Next">
+                                <i class="fa fa-lg fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- || HAPPY CLIENTS End -->
+
+
+    <!-- || FOOTER Start -->
+    <footer>
+        <div class="container pb-5">
+            <div class="row">
+                <!-- || Contact Information -->
+                <div class="col-md-4 col-sm-6 col-12 pt-5">
+                    <h4 class="footer-section-heading">Contact Information</h4>
+                    <div class="contact-info">
+                        <div class="place">
+                            <span class="fas fa-map-marker-alt"></span>
+                            <span class="text">&nbsp; TechnoColabs, Indore.</span>
+                        </div>
+                        <div class="place">
+                            <a href="tel:1234567890"><span class="fas fa-phone-alt"></span>&nbsp; 12345 67890 </a>
+                        </div>
+                        <div class="place">
+                            <a href="mailto:technocolabs@gmail.com">
+                                <span class="fas fa-envelope"></span>&nbsp; technocolabs@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- || Footer Menu -->
+                <div class="col-md-3 offset-md-1 col-sm-6 col-12 px-md-4 pt-5">
+                    <h4 class="footer-section-heading">Footer Menu</h4>
+                    <ul class="footer-menu">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="./faq.html">FAQs</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- || Form & Follow Us -->
+                <div class="col-md-4 col-sm-6 col-12 pt-5">
+                    <h4 class="footer-section-heading">Our Newsletter</h4>
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group mb-2">
+                                    <label for="signup" class="sr-only">Password</label>
+                                    <input type="text" class="form-control" id="signup" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <button type="submit" class="btn btn-secondary ripple mb-2">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <h4 class="footer-section-heading mt-3">Follow Us</h4>
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="#"><span class="fab fa-google-plus-g	"></span></a>
+                        <a href="#"><span class="fab fa-pinterest-p"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- || FOOTER End -->
+
+
+    <!-- Go to Top Button Start -->
+    <section>
+        <div class="top-button-position">
+            <a href="#top" title="Go To Top" class="btn top-button ripple">
+                <i class="fas fa-angle-double-up"></i>
+            </a>
+        </div>
+    </section>
+    <!-- Go to Top Button End -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/inbuilt_js/owl.carousel.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="./assets/js/navbarToggler.js" defer></script>
+    <script src="./assets/js/clientSlider.js" defer></script>
+    <script src="./assets/js/carousel.js" defer></script>
+    <script src="./assets/js/loginSignupForm.js" defer></script>
+</body>
+
+</html>

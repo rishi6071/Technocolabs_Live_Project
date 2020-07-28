@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="author" content="Rishi Soni, Ofrin Lopes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- title tag -->
+    <title>FAQs | TechnoColabs</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- FONT AWESOME SCRIPT KIT CODE OF W3SCHOOL -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Ion Icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/gotoTopButton.css">
+    <link rel="stylesheet" href="./assets/css/ripple.css">
+
+    <!-- For this Specific Page -->
+    <link rel="stylesheet" href="./assets/css/faq.css">
+
+    <style>
+        /* Re-assigning because of faq.css */
+        footer,
+        .header-contact,
+        .top-button,
+        footer input,
+        footer button {
+            font-size: 16px !important;
+        }
+
+        .menu-icon,
+        .menu-close-icon {
+            vertical-align: 15px;
+            font-size: 22px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- || HEADER & NAVBAR Start -->
+    <header>
+        <div id="top"></div>
+        <!-- Logo and phone -->
+        <div class="container-fluid" id="header-logo-contact">
+            <p class="pt-3 pb-0 px-4">
+                <a href="./index.html" class="brand-logo">
+                    <img src="./assets/img/logo/brandLogo.png" alt="Brand-logo">
+                </a>
+                <a href="tel:1234567890" class="header-contact">
+                    <span class='fas fa-phone-square-alt'></span> 1234 567 890
+                </a>
+            </p>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg p-0">
+            <a class="navbar-brand brand-logo brand-logo-toggler" href="#">
+                <img src="./assets/img/logo/brandLogo.png" class="" alt="Brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars menu-icon" aria-hidden="true" id="bar" onclick="openMenu(this)"></i>
+                    <i class="fa fa-times menu-close-icon" aria-hidden="true" id="cross" onclick="closeMenu(this)"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="./services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="./contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Triggering Modal -->
+                        <a class="nav-link ripple" href="#" data-toggle="modal" data-target="#loginSignup">Login/Signup
+                            <i class="fas fa-sign-in-alt"></i></a>
+
+                        <!-- Modal -->
+                        <div class="modal" id="loginSignup" tabindex="-1" role="dialog"
+                            aria-labelledby="loginSignupTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title pl-2 brand-logo" id="exampleModalLongTitle"><img
+                                                src="./assets/img/logo/brandLogo.png" alt="brnad-logo"></h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"> <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Login or Signup Option -->
+                                        <div class="row">
+                                            <div class="col-6 text-center py-0">
+                                                <a href="#" class="h6 active-opt" id="login-opt">Login</a>
+                                                <hr class="w-100 active-border">
+                                            </div>
+                                            <div class="col-6 text-center py-0">
+                                                <a href="#" class="h6" id="signup-opt">Signup</a>
+                                                <hr class="w-100" id="">
+                                            </div>
+                                        </div>
+
+                                        <!-- Login Fields -->
+                                        <form action="#" method="post" id="login-form" class="d-block">
+                                            <div class="form-group">
+                                                <label for="login-email" class="form-label">Email Id:</label>
+                                                <input type="email" name="login-email" id="login-email"
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="login-password">Password:</label>
+                                                <input type="password" name="login-password" id="login-password"
+                                                    class="form-control" required>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="login-remember"
+                                                    name="login-remember" checked>
+                                                <label class="custom-control-label text-dark"
+                                                    for="login-remember">Remember Me</label>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <button type="submit"
+                                                            class="btn ripple btn-success btn-block">Submit</button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="reset"
+                                                            class="btn ripple btn-info btn-block">Reset</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <!-- Signup Fields -->
+                                        <form action="#" method="post" id="signup-form" class="d-none">
+                                            <div class="form-group">
+                                                <label for="signup-username">Username:</label>
+                                                <input type="text" class="form-control" name="signup-username"
+                                                    id="signup-username" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup-email">Email Id:</label>
+                                                <input type="email" class="form-control" name="signup-email"
+                                                    id="signup-email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup-contact">Contact No.</label>
+                                                <input type="tel" name="signup-contact" id="signup-contact"
+                                                    class="form-control" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup-pswd">Password:</label>
+                                                <input type="password" name="signup-pswd" id="signup-pswd"
+                                                    class="form-control" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup-cpswd">Confirm Password:</label>
+                                                <input type="password" name="signup-cpswd" id="signup-cpswd"
+                                                    class="form-control" required>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck"
+                                                    name="example1" checked>
+                                                <label class="custom-control-label text-dark" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <small>By creating an account, You agree to our <a href="./privacy.html"
+                                                        class="text-warning">Terms & Policy</a></small>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <button type="submit"
+                                                            class="btn ripple btn-success btn-block">Submit</button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="reset"
+                                                            class="btn ripple btn-info btn-block">Reset</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- || HEADER & NAVBAR End -->
+
+
+    <!-- || FAQs Start -->
+    <main id="faq-page">
+        <div class="container">
+            <h2 class="mb-5 service-heading">FAQs</h2>
+            <div class="accordion">
+                <div class="accordion-item" id="question1">
+                    <a class="accordion-link ripple" href="#question1">
+                        How often do you go to the beach?
+                        <i class="icon ion-md-add"></i>
+                        <i class="icon ion-md-remove"></i>
+                    </a>
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maxime quasi sint at aperiam
+                            expedita laudantium rem, voluptates accusamus. Beatae, odit voluptatum ut eum recusandae
+                            velit nisi laboriosam deleniti exercitationem?</p>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item" id="question2">
+                    <a class="accordion-link ripple" href="#question2">
+                        How often do you go shopping?
+                        <i class="icon ion-md-add"></i>
+                        <i class="icon ion-md-remove"></i>
+                    </a>
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maxime quasi sint at aperiam
+                            expedita laudantium rem, voluptates accusamus. Beatae, odit voluptatum ut eum recusandae
+                            velit nisi laboriosam deleniti exercitationem?</p>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item" id="question3">
+                    <a class="accordion-link ripple" href="#question3">
+                        How often do you walk the dog?
+                        <i class="icon ion-md-add"></i>
+                        <i class="icon ion-md-remove"></i>
+                    </a>
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maxime quasi sint at aperiam
+                            expedita laudantium rem, voluptates accusamus. Beatae, odit voluptatum ut eum recusandae
+                            velit nisi laboriosam deleniti exercitationem?</p>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item" id="question4">
+                    <a class="accordion-link ripple" href="#question4">
+                        How often do you go to your parent's house?
+                        <i class="icon ion-md-add"></i>
+                        <i class="icon ion-md-remove"></i>
+                    </a>
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maxime quasi sint at aperiam
+                            expedita laudantium rem, voluptates accusamus. Beatae, odit voluptatum ut eum recusandae
+                            velit nisi laboriosam deleniti exercitationem?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- || FAQs End -->
+
+
+    <!-- || FOOTER Start -->
+    <footer>
+        <div class="container pb-5">
+            <div class="row">
+                <!-- || Contact Information -->
+                <div class="col-md-4 col-sm-6 col-12 pt-5">
+                    <h4 class="footer-section-heading">Contact Information</h4>
+                    <div class="contact-info">
+                        <div class="place">
+                            <span class="fas fa-map-marker-alt"></span>
+                            <span class="text">&nbsp; TechnoColabs, Indore.</span>
+                        </div>
+                        <div class="place">
+                            <a href="tel:1234567890"><span class="fas fa-phone-alt"></span>&nbsp; 12345 67890 </a>
+                        </div>
+                        <div class="place">
+                            <a href="mailto:technocolabs@gmail.com">
+                                <span class="fas fa-envelope"></span>&nbsp; technocolabs@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- || Footer Menu -->
+                <div class="col-md-3 offset-md-1 col-sm-6 col-12 px-md-4 pt-5">
+                    <h4 class="footer-section-heading">Footer Menu</h4>
+                    <ul class="footer-menu">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="./faq.html" class="footer-active">FAQs</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- || Form & Follow Us -->
+                <div class="col-md-4 col-sm-6 col-12 pt-5">
+                    <h4 class="footer-section-heading">Our Newsletter</h4>
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group mb-2">
+                                    <label for="signup" class="sr-only">Password</label>
+                                    <input type="text" class="form-control" id="signup" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <button type="submit" class="btn ripple btn-secondary mb-2">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <h4 class="footer-section-heading mt-3">Follow Us</h4>
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="#"><span class="fab fa-google-plus-g	"></span></a>
+                        <a href="#"><span class="fab fa-pinterest-p"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- || FOOTER End -->
+
+
+    <!-- Go to Top Button Start -->
+    <section>
+        <div class="top-button-position">
+            <a href="#top" title="Go To Top" class="btn ripple top-button">
+                <i class="fas fa-angle-double-up"></i>
+            </a>
+        </div>
+    </section>
+    <!-- Go to Top Button End -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Scripts -->
+    <script src="./assets/js/navbarToggler.js"></script>
+    <script src="./assets/js/loginSignupForm.js" defer></script>
+
+</body>
+
+</html>
