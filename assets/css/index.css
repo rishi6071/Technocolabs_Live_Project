@@ -1,9 +1,10 @@
 @charset "utf-8";
+
 /* || index.html */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Overpass&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
-
 * {
     padding: 0;
     margin: 0;
@@ -11,17 +12,25 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
-a { text-decoration: none !important; }
+a {
+    text-decoration: none !important;
+}
+
 
 /* When user selects the text content by pressing the cursor */
+
 ::selection {
     background: rgba(0, 0, 0, 0.5);
     color: white;
 }
 
+
 /* || All Headings like Services, Our Work, etc */
+
 .service-heading {
     text-align: center;
     font-size: 33px;
@@ -32,6 +41,7 @@ a { text-decoration: none !important; }
 
 
 /* ---------- || HOME BANNER ---------- */
+
 #banner {
     background: #f9fbe7;
 }
@@ -53,13 +63,16 @@ a { text-decoration: none !important; }
 
 
 /* ---------- || SERVICES CARD ---------- */
-.company-services .item { 
-    text-align: center; 
+.company-services .item {
+    text-align: center;
     background: white !important;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.company-services img { margin: auto; }
+
+.company-services img {
+    margin: auto;
+}
 
 .services-card .card-title {
     font-size: 1.3em;
@@ -67,17 +80,24 @@ a { text-decoration: none !important; }
     color: hsl(200, 18%, 26%);
 }
 
+.services-card .card-text {
+    color: #9e9e9e;
+}
+
 .services-card img {
     max-width: 100px;
     height: 100px;
-    border-radius: 50%;
     object-fit: cover;
+    transform: scale(0.8);
     margin-bottom: 15px;
 }
 
 
 /* ---------- || OUR WORK CARD ( Services Page ) ---------- */
-.our-work-card, .services-card, .clients-card {
+
+.our-work-card,
+.services-card,
+.clients-card {
     -webkit-box-shadow: 0px 3px 5px lightgrey;
     -ms-box-shadow: 0px 3px 5px lightgrey;
     box-shadow: 0px 3px 5px lightgrey;
@@ -106,7 +126,7 @@ a { text-decoration: none !important; }
     object-fit: cover;
 }
 
-.our-work-card .card-title {    
+.our-work-card .card-title {
     color: hsl(200, 18%, 26%);
 }
 
@@ -116,7 +136,9 @@ a { text-decoration: none !important; }
     transition: 0.8s;
 }
 
-.our-work-card .btn:hover {  border-radius: 2px; }
+.our-work-card .btn:hover {
+    border-radius: 2px;
+}
 
 @media screen and (max-width:768px) {
     .our-work {
@@ -127,31 +149,35 @@ a { text-decoration: none !important; }
 
 
 /* ---------- || Quality Content & Quote Form ---------- */
+
 .quality-quote-form {
     background: rgba(128, 128, 128, 0.1);
     padding: 2.3em 1em;
 }
 
-.quality-content { 
+.quality-content {
     font-family: 'Overpass', sans-serif;
     font-weight: 600;
     color: hsla(200, 18%, 26%, 0.6);
     font-size: 0.95em;
 }
 
-.quality-content a { text-decoration: none; }
+.quality-content a {
+    text-decoration: none;
+}
 
-.quality-content > p {
+.quality-content>p {
     padding-top: 18px;
     line-height: 1.5;
 }
 
-.quality-content > p:first-child {
+.quality-content>p:first-child {
     padding-top: 0;
 }
 
 
 /* ---------- || Happy Clients ---------- */
+
 .carousel-item {
     background: white !important;
     padding-top: 15px;
@@ -163,7 +189,7 @@ a { text-decoration: none !important; }
     border: 1px solid rebeccapurple;
 }
 
-.clients-card { 
+.clients-card {
     min-height: 300px;
     padding-top: 20px;
     font-family: Arial !important;
@@ -184,10 +210,10 @@ a { text-decoration: none !important; }
     font-weight: 500;
 }
 
-.clients-card .client-info { 
+.clients-card .client-info {
     line-height: 0.7;
     font-size: 0.9em;
- }
+}
 
 .clients-card .client-info p:first-child {
     font-weight: bold;

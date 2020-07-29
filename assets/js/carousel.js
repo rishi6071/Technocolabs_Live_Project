@@ -17,9 +17,8 @@ $('.company-services').owlCarousel({
     nav: false,
     responsive: {
         0: { items: 1 },
-        576: { items: 2 },
-        768: { items: 3 },
-        1300: { items: 3 }
+        768: { items: 2 },
+        992: { items: 3 }
     }
 })
 
