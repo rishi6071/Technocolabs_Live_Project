@@ -16,12 +16,12 @@
                 contactField.style.borderColor = "lightgrey";
             }
             else {
-                window.alert("Contact Number Format is Invalid!!!");
+                window.alert("Contact Number Format is Invalid!!! \n Format- [6-9]{1}-[0-9]{9}");
                 return errorMessage();
             } 
         }
         else {
-            window.alert("Contact Number Format is Invalid!!!");
+            window.alert("Contact Number Format is Invalid!!! \n Format- [6-9]{1}-[0-9]{9}");
             return errorMessage();
         }        
 
