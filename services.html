@@ -142,7 +142,9 @@
                                         </form>
 
                                         <!-- Signup Fields -->
-                                        <form action="#" method="post" id="signup-form" class="d-none">
+                                        <form action="#" method="post" id="signup-form"
+                                            onsubmit="event.preventDefault(); return checkContact(); return checkPassword()"
+                                            class="d-none">
                                             <div class="form-group">
                                                 <label for="signup-username">Username:</label>
                                                 <input type="text" class="form-control" name="signup-username"
@@ -156,17 +158,21 @@
                                             <div class="form-group">
                                                 <label for="signup-contact">Contact No.</label>
                                                 <input type="tel" name="signup-contact" id="signup-contact"
+                                                    pattern="[0-9]{10}" onchange="return checkContact()"
                                                     class="form-control" required>
+                                                <small id="contact-error-field" class="mt-2 text-danger"></small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="signup-pswd">Password:</label>
-                                                <input type="password" name="signup-pswd" id="signup-pswd"
-                                                    class="form-control" required>
+                                                <input type="password" name="signup-pswd" id="signup-pswd" minlength="8"
+                                                    maxlength="12" class="form-control" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="signup-cpswd">Confirm Password:</label>
                                                 <input type="password" name="signup-cpswd" id="signup-cpswd"
-                                                    class="form-control" required>
+                                                    minlength="8" maxlength="12" class="form-control"
+                                                    onchange="return checkPassword()" required>
+                                                <small id="pswd-error-field" class="mt-2 text-danger"></small>
                                             </div>
                                             <div class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck"
@@ -182,11 +188,11 @@
                                                 <div class="row">
                                                     <div class="col-6">
                                                         <button type="submit"
-                                                            class="btn ripple btn-success btn-block">Submit</button>
+                                                            class="btn btn-success ripple btn-block">Submit</button>
                                                     </div>
                                                     <div class="col-6">
                                                         <button type="reset"
-                                                            class="btn ripple btn-info btn-block">Reset</button>
+                                                            class="btn btn-info ripple btn-block">Reset</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -566,6 +572,7 @@
     <script src="./assets/js/navbarToggler.js"></script>
     <script src="./assets/js/carousel.js" defer></script>
     <script src="./assets/js/loginSignupForm.js" defer></script>
+    <script src="./assets/js/registerValidation.js" async></script>
 
 </body>
 
