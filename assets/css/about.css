@@ -5,12 +5,17 @@
 }
 
 /* ------------- || ABOUT US CONTENT ------------- */
+#about-content {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #6C757D;
+    line-height: 1.8;
+}
+
 
 #about-content::first-letter {
     font-weight: bold;
-    font-size: 3em;
+    font-size: 2em;
     color: #008080;
-    margin-right: 5px;
 }
 
 .service-heading {
