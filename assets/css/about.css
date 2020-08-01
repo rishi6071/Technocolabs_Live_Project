@@ -11,11 +11,14 @@
     line-height: 1.8;
 }
 
-
 #about-content::first-letter {
     font-weight: bold;
     font-size: 2em;
     color: #008080;
+}
+
+#about-content em {
+    font-family: "Times New Roman";
 }
 
 .service-heading {
